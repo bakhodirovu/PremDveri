@@ -42,4 +42,18 @@ window.addEventListener('DOMContentLoaded', function () {
       }
     }
   })
+
+  const modalBtn = document.querySelector('#myModal'),
+        modal = document.querySelector('.modal'),
+        closeModal = document.querySelector('.close');
+
+        modalBtn.addEventListener('click', function(){
+          modal.style.display = "flex";
+        });
+
+        closeModal.addEventListener('click',function(){
+          modal.style.display = "none";
+        });
+        
+
 })
