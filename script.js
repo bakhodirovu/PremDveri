@@ -43,17 +43,34 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   })
 
-  const modalBtn = document.querySelector('#myModal'),
-        modal = document.querySelector('.modal'),
-        closeModal = document.querySelector('.close');
+    const btn = document.querySelector('#m_btn'),
+          modalBg = document.querySelector('.modal-bg'),
+          close = document.querySelector('.close');
 
-        modalBtn.addEventListener('click', function(){
-          modal.style.display = "flex";
-        });
+    btn.addEventListener('click',function(){
+      modalBg.style.display = 'flex';
+    });
 
-        closeModal.addEventListener('click',function(){
-          modal.style.display = "none";
-        });
-        
+    close.addEventListener('click',function(){
+      modalBg.style.display = 'none';
+    });
+
+    function submit({token,chatId,data}){
+      fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${data}`)
+    }
+    document.querySelector('.modal-bg').addEventListener('submit',(e)=>{
+      e.preventDefault();
+      const name = document.querySelector("[name=name]").value;
+      const phone = document.querySelector("[name=phone]").value;
+      const msg = document.querySelector("[name=msg]").value;
+
+      
+      submit({
+        token:"5553811862:AAGxheOswAirDSj0DM45cjqumTrGIAplUng",
+        chatId:"-698075851",
+        data:`Imya:${name} %0ATelnomer:${phone}%0A Sms: ${msg}`
+      });
+
+    });
 
 })
