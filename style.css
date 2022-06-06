@@ -551,6 +551,32 @@ section {
   }
 }
 
+.cattalog .content .img_card img{
+    
+  position: relative;
+  width: 380px;
+  height: 410px;
+
+}
+.cattalog{
+  background: url(/img/bgc11.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.cattalog .title{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(220, 20, 20);
+  font-size: 40px;
+  font-weight: 800;
+ 
+
+}
+
 .scrollToTop-btn {
   z-index: 999;
   position: fixed;

@@ -68,9 +68,9 @@ window.addEventListener('DOMContentLoaded', function () {
       submit({
         token:"5553811862:AAGxheOswAirDSj0DM45cjqumTrGIAplUng",
         chatId:"-698075851",
-        data:`Imya:${name} %0ATelnomer:${phone}%0A Sms: ${msg}`
+        data:`name:${name} %0A phonenumber:${phone}%0A message: ${msg}`
       });
 
-    });
-
+   });
+    
 })
