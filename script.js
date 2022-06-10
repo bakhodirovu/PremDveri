@@ -70,7 +70,15 @@ window.addEventListener('DOMContentLoaded', function () {
         chatId:"-698075851",
         data:`name:${name} %0A phonenumber:${phone}%0A message: ${msg}`
       });
+    
 
    });
+
+   const OtpClose = document.querySelector('#otp');
+
+   OtpClose.addEventListener('click',() =>{
+     modalBg.style.display = 'none';
+      
+   })
     
 })
